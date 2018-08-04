@@ -21,12 +21,13 @@ export default Component.extend({
     return htmlSafe(`padding-left: ${+this.get('model.parentCount') * 20 + 5}px;`);
   }),
 
-  isCurrent: computed('currentRoute', 'model.value.name', function() {
+  isCurrent: computed('currentRoute', 'model.value', function() {
     let currentRoute = this.get('currentRoute');
+    debugger;
     if (!currentRoute) {
       return false;
     }
 
-    return checkCurrentRoute(currentRoute, this.get('model.value.name'));
+    return checkCurrentRoute(currentRoute, this.get('model.value'));
   })
 });

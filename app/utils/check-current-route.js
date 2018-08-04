@@ -1,6 +1,8 @@
-export default function(currentRouteName, routeName) {
+export default function(currentRoute, route) {
   let regName, match;
-
+  const currentRouteName = currentRoute.name;
+  const routeName = route.name;
+debugger;
   if (routeName === 'application') {
     return true;
   }

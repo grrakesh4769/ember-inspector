@@ -29,7 +29,7 @@ export default Controller.extend({
       }
 
       if (hideRoutes && currentRoute) {
-        return checkCurrentRoute(currentRoute, routeItem.value.name);
+        return checkCurrentRoute(currentRoute, routeItem.value);
       }
 
       return true;
