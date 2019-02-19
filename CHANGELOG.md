@@ -2,11 +2,149 @@
 
 ## [Unreleased](https://github.com/emberjs/ember-inspector/tree/HEAD)
 
-[Full Changelog](https://github.com/emberjs/ember-inspector/compare/v3.3.0...HEAD)
+[Full Changelog](https://github.com/emberjs/ember-inspector/compare/v3.6.0...HEAD)
+
+**Fixed bugs:**
+
+- \[v3.5\] No longer detects my ember-app [\#927](https://github.com/emberjs/ember-inspector/issues/927)
+
+## [v3.6.0](https://github.com/emberjs/ember-inspector/tree/v3.6.0) (2019-01-29)
+
+[Full Changelog](https://github.com/emberjs/ember-inspector/compare/v3.5.0...v3.6.0)
+
+**Implemented enhancements:**
+
+- Default to Components Route [\#924](https://github.com/emberjs/ember-inspector/pull/924) ([nummi](https://github.com/nummi))
+
+**Closed issues:**
+
+- getApplications\(...\).mapBy is not a function [\#926](https://github.com/emberjs/ember-inspector/issues/926)
 
 **Merged pull requests:**
 
+- Revert the things [\#932](https://github.com/emberjs/ember-inspector/pull/932) ([rwwagner90](https://github.com/rwwagner90))
+- use map for broader compatibility [\#928](https://github.com/emberjs/ember-inspector/pull/928) ([efx](https://github.com/efx))
+- Bump minor version to 3.6.0 [\#922](https://github.com/emberjs/ember-inspector/pull/922) ([rwwagner90](https://github.com/rwwagner90))
+- Update CHANGELOG.md [\#921](https://github.com/emberjs/ember-inspector/pull/921) ([rwwagner90](https://github.com/rwwagner90))
+
+## [v3.5.0](https://github.com/emberjs/ember-inspector/tree/v3.5.0) (2019-01-25)
+
+[Full Changelog](https://github.com/emberjs/ember-inspector/compare/v3.4.0...v3.5.0)
+
+**Implemented enhancements:**
+
+- Chrome Store Extension page refers to old repo. [\#893](https://github.com/emberjs/ember-inspector/issues/893)
+- Button to view element in browser Elements panel [\#917](https://github.com/emberjs/ember-inspector/pull/917) ([nummi](https://github.com/nummi))
+- Ember 3.7 beta, bump other deps [\#911](https://github.com/emberjs/ember-inspector/pull/911) ([rwwagner90](https://github.com/rwwagner90))
+- Use ember-table for Container [\#910](https://github.com/emberjs/ember-inspector/pull/910) ([nummi](https://github.com/nummi))
+- Use ember-table for Libraries Tab [\#907](https://github.com/emberjs/ember-inspector/pull/907) ([nummi](https://github.com/nummi))
+- Use ember-table for Routes Tab [\#906](https://github.com/emberjs/ember-inspector/pull/906) ([nummi](https://github.com/nummi))
+- Data Table Colors Fixens [\#904](https://github.com/emberjs/ember-inspector/pull/904) ([nummi](https://github.com/nummi))
+- Fix dropdown arrow in dark mode [\#902](https://github.com/emberjs/ember-inspector/pull/902) ([nummi](https://github.com/nummi))
+- \[multiple apps\] Support multiple apps on the same page and toggling between them [\#898](https://github.com/emberjs/ember-inspector/pull/898) ([alexhancock](https://github.com/alexhancock))
+- Remove Orange from Dark Theme [\#894](https://github.com/emberjs/ember-inspector/pull/894) ([nummi](https://github.com/nummi))
+
+**Fixed bugs:**
+
+- Components in view tree test failing Ember 3.8+ [\#915](https://github.com/emberjs/ember-inspector/issues/915)
+- Error retrieving/parsing sourcemaps with absolute sourcemap URLs [\#908](https://github.com/emberjs/ember-inspector/issues/908)
+- Table's area sizing issue [\#892](https://github.com/emberjs/ember-inspector/issues/892)
+
+**Closed issues:**
+
+- Data Table Heading Colors [\#900](https://github.com/emberjs/ember-inspector/issues/900)
+
+**Merged pull requests:**
+
+- Remove 2 uses of sendAction [\#920](https://github.com/emberjs/ember-inspector/pull/920) ([nlfurniss](https://github.com/nlfurniss))
+- Use `\_target`, remove some duplication [\#919](https://github.com/emberjs/ember-inspector/pull/919) ([rwwagner90](https://github.com/rwwagner90))
+- Fix SVG viewBox warning for ember-icon [\#913](https://github.com/emberjs/ember-inspector/pull/913) ([nummi](https://github.com/nummi))
+- Fix x-list height and column width on window resize [\#912](https://github.com/emberjs/ember-inspector/pull/912) ([nummi](https://github.com/nummi))
+- When forming the URL to retrieve a source map, if it is already an absolute URL then use it as is [\#909](https://github.com/emberjs/ember-inspector/pull/909) ([fusion2004](https://github.com/fusion2004))
+- Bump minor version to 3.5.0 [\#905](https://github.com/emberjs/ember-inspector/pull/905) ([rwwagner90](https://github.com/rwwagner90))
+- Clean up unused manifest property + prevent error in storage lookup [\#899](https://github.com/emberjs/ember-inspector/pull/899) ([22a](https://github.com/22a))
+- Ember 3.5.1, lots of template lint fixes [\#896](https://github.com/emberjs/ember-inspector/pull/896) ([rwwagner90](https://github.com/rwwagner90))
+- Update changelog for 3.4.0 [\#891](https://github.com/emberjs/ember-inspector/pull/891) ([rwwagner90](https://github.com/rwwagner90))
+
+## [v3.4.0](https://github.com/emberjs/ember-inspector/tree/v3.4.0) (2018-12-03)
+
+[Full Changelog](https://github.com/emberjs/ember-inspector/compare/v3.3.2...v3.4.0)
+
+**Implemented enhancements:**
+
+- Replace Inspect Ember Component Icon with Ember "e" [\#871](https://github.com/emberjs/ember-inspector/issues/871)
+- What's New [\#821](https://github.com/emberjs/ember-inspector/issues/821)
+- add a refresh button for Data tab like you do for Container [\#672](https://github.com/emberjs/ember-inspector/issues/672)
+- Alphabetically sort data view [\#562](https://github.com/emberjs/ember-inspector/issues/562)
+- Routes tab, hide substates checkbox [\#502](https://github.com/emberjs/ember-inspector/issues/502)
+- Collapse deprecations by default [\#454](https://github.com/emberjs/ember-inspector/issues/454)
+- Is it possible use ember-extension to dev chrome extension with emberjs [\#115](https://github.com/emberjs/ember-inspector/issues/115)
+- Enforce stylelint [\#889](https://github.com/emberjs/ember-inspector/pull/889) ([rwwagner90](https://github.com/rwwagner90))
+- Add a Refresh button to the Data Tab [\#886](https://github.com/emberjs/ember-inspector/pull/886) ([pbishop16](https://github.com/pbishop16))
+- Send container to console \(\#311\) [\#882](https://github.com/emberjs/ember-inspector/pull/882) ([thorsteinsson](https://github.com/thorsteinsson))
+- Flat Display of Object Properties [\#877](https://github.com/emberjs/ember-inspector/pull/877) ([nummi](https://github.com/nummi))
+- Replace small Tomster icons with Ember's 'e' icon [\#876](https://github.com/emberjs/ember-inspector/pull/876) ([dipil-saud](https://github.com/dipil-saud))
+- Use ember-table for the Ember Data inspector [\#873](https://github.com/emberjs/ember-inspector/pull/873) ([thorsteinsson](https://github.com/thorsteinsson))
+- Expose storage type to use via LocalStorage service [\#869](https://github.com/emberjs/ember-inspector/pull/869) ([nlfurniss](https://github.com/nlfurniss))
+- Components view scrolling [\#867](https://github.com/emberjs/ember-inspector/pull/867) ([thorsteinsson](https://github.com/thorsteinsson))
+- Route Tree: Hide Substates Checkbox [\#860](https://github.com/emberjs/ember-inspector/pull/860) ([nummi](https://github.com/nummi))
+- What’s New screen [\#858](https://github.com/emberjs/ember-inspector/pull/858) ([nummi](https://github.com/nummi))
+- Remove jQuery, use flatpickr instead of pikaday [\#842](https://github.com/emberjs/ember-inspector/pull/842) ([rwwagner90](https://github.com/rwwagner90))
+
+**Fixed bugs:**
+
+- Uncaught TypeError: Cannot read property 'send' of undefined [\#864](https://github.com/emberjs/ember-inspector/issues/864)
+- Route Display Errors [\#861](https://github.com/emberjs/ember-inspector/issues/861)
+- current route is not displayed if `resetNamespace:true` [\#832](https://github.com/emberjs/ember-inspector/issues/832)
+- Ember Inspector has errored with ember-feature-flags [\#814](https://github.com/emberjs/ember-inspector/issues/814)
+- Only application present in View Tree [\#419](https://github.com/emberjs/ember-inspector/issues/419)
+- Don't send count if the object is destroyed [\#884](https://github.com/emberjs/ember-inspector/pull/884) ([thorsteinsson](https://github.com/thorsteinsson))
+- Use \[class='ember-view'\] selector to exclude anything with extra classes [\#874](https://github.com/emberjs/ember-inspector/pull/874) ([rwwagner90](https://github.com/rwwagner90))
+- Fix issue with Proxy services [\#859](https://github.com/emberjs/ember-inspector/pull/859) ([vladucu](https://github.com/vladucu))
+- Fix Ember Inspector during tests for Ember \>= 3 [\#855](https://github.com/emberjs/ember-inspector/pull/855) ([teddyzeenny](https://github.com/teddyzeenny))
+
+**Closed issues:**
+
+- Add comment blocks to classes/methods/properties [\#378](https://github.com/emberjs/ember-inspector/issues/378)
+- Allow flat display of object attributes  [\#364](https://github.com/emberjs/ember-inspector/issues/364)
+- Should expose container itself for easier debugging [\#311](https://github.com/emberjs/ember-inspector/issues/311)
+- Use model's `primaryKey` value on data tab [\#57](https://github.com/emberjs/ember-inspector/issues/57)
+
+**Merged pull requests:**
+
+- Apply classes to get back record colors [\#888](https://github.com/emberjs/ember-inspector/pull/888) ([rwwagner90](https://github.com/rwwagner90))
+- Skip promise debug test that fails [\#887](https://github.com/emberjs/ember-inspector/pull/887) ([rwwagner90](https://github.com/rwwagner90))
+- Collapse deprecations by default [\#885](https://github.com/emberjs/ember-inspector/pull/885) ([thorsteinsson](https://github.com/thorsteinsson))
+- Fix test failures by passing function references to `off` [\#883](https://github.com/emberjs/ember-inspector/pull/883) ([rwwagner90](https://github.com/rwwagner90))
+- Add ability to sort models by record count [\#866](https://github.com/emberjs/ember-inspector/pull/866) ([nlfurniss](https://github.com/nlfurniss))
+- Add test for hideEmptyModelTypes [\#865](https://github.com/emberjs/ember-inspector/pull/865) ([nlfurniss](https://github.com/nlfurniss))
+- Fix routes reset namespace display [\#863](https://github.com/emberjs/ember-inspector/pull/863) ([pbishop16](https://github.com/pbishop16))
+- Bind to object to fix debugInfo [\#853](https://github.com/emberjs/ember-inspector/pull/853) ([rwwagner90](https://github.com/rwwagner90))
+- Update changelog for 3.3.0 [\#850](https://github.com/emberjs/ember-inspector/pull/850) ([rwwagner90](https://github.com/rwwagner90))
 - Bump minor version to 3.4.0 [\#849](https://github.com/emberjs/ember-inspector/pull/849) ([teddyzeenny](https://github.com/teddyzeenny))
+
+## [v3.3.2](https://github.com/emberjs/ember-inspector/tree/v3.3.2) (2018-08-13)
+
+[Full Changelog](https://github.com/emberjs/ember-inspector/compare/v3.3.1...v3.3.2)
+
+**Implemented enhancements:**
+
+- Remove jQuery [\#590](https://github.com/emberjs/ember-inspector/issues/590)
+- Filter Models \[enhancement\] [\#455](https://github.com/emberjs/ember-inspector/issues/455)
+
+**Fixed bugs:**
+
+- Failing in Ember 3.1 [\#818](https://github.com/emberjs/ember-inspector/issues/818)
+- Seeing failing tests on `/tests` route with Ember Inspector open [\#816](https://github.com/emberjs/ember-inspector/issues/816)
+- \[FEATURE REQUEST\] Find component by ID in Tree View [\#490](https://github.com/emberjs/ember-inspector/issues/490)
+
+## [v3.3.1](https://github.com/emberjs/ember-inspector/tree/v3.3.1) (2018-08-03)
+
+[Full Changelog](https://github.com/emberjs/ember-inspector/compare/v3.3.0...v3.3.1)
+
+**Closed issues:**
+
+-  Cannot read property 'eachAttribute' of undefined [\#851](https://github.com/emberjs/ember-inspector/issues/851)
 
 ## [v3.3.0](https://github.com/emberjs/ember-inspector/tree/v3.3.0) (2018-08-02)
 

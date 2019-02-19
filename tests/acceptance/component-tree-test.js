@@ -156,7 +156,36 @@ module('Component Tab', function(hooks) {
 
     treeNodes = findAll('.component-tree-item');
     assert.equal(treeNodes.length, 3, 'the last node should be hidden');
+  });
 
+  test('It allows users to expand and collapse children with alt key', async function(assert) {
+    let viewTree = defaultViewTree();
+
+    await visit('/component-tree');
+    run(() => {
+      port.trigger('view:viewTree', { tree: viewTree });
+    });
+    await wait();
+
+    let expanders = findAll('.component-tree-item__expand.expanded');
+    assert.equal(expanders.length, 3, 'disclosure triangles all in expanded state');
+
+    // Click second component with alt key;
+    // this should collapse itself and children
+    let expanderEl = expanders[1];
+    await click(expanderEl, { altKey: true });
+    expanders = findAll('.component-tree-item__expand.expanded');
+    assert.equal(expanders.length, 1, 'clicked disclosure triangle no longer expanded');
+
+    expanders = findAll('.component-tree-item__expand');
+    expanderEl = expanders[1];
+    await click(expanderEl);
+
+    // After expanding second component without alt key
+    // the children should be collapsed
+    expanders = findAll('.component-tree-item__expand');
+    expanderEl = expanders[2];
+    assert.ok(expanderEl.classList.contains('collapsed'), 'child component was collapsed');
   });
 
   test('It should filter the view tree using the search text', async function(assert) {
@@ -274,11 +303,33 @@ module('Component Tab', function(hooks) {
     run(() => port.trigger('view:viewTree', { tree: viewTree }));
     await wait();
 
-    await click('.component-tree-item__view-element');
+    await click('.js-scroll-into-view');
     assert.equal(
       messageSent.name,
       'view:scrollToElement',
       'Client asked to scroll element into view'
+    );
+  });
+
+  test('View DOM element in Elements panel', async function(assert) {
+    let messageSent = null;
+    port.reopen({
+      send(name, message) {
+        messageSent = { name, message };
+      },
+    });
+
+    await visit('/component-tree');
+
+    let viewTree = defaultViewTree();
+    run(() => port.trigger('view:viewTree', { tree: viewTree }));
+    await wait();
+
+    await click('.js-view-dom-element');
+    assert.equal(
+      messageSent.name,
+      'view:inspectElement',
+      'Client asked to view DOM element'
     );
   });
 

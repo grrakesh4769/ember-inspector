@@ -49,7 +49,6 @@ module('Container Tab', function(hooks) {
     message = null;
   });
 
-
   test("Container types are successfully listed", async function(assert) {
     port.reopen({
       send(name) {
@@ -67,7 +66,6 @@ module('Container Tab', function(hooks) {
     assert.dom(findAll('.js-container-type-name')[1]).hasText('route');
     assert.dom(findAll('.js-container-type-count')[1]).hasText('5');
   });
-
 
   test("Container instances are successfully listed", async function(assert) {
     let instances = getInstances();
@@ -96,10 +94,10 @@ module('Container Tab', function(hooks) {
     name = null;
     message = null;
 
-    await click(rows[0]);
+    await click(rows[0].querySelector('.js-instance-name'));
 
     assert.equal(name, null);
-    await click(rows[1]);
+    await click(rows[1].querySelector('.js-instance-name'));
 
     assert.equal(name, 'objectInspector:inspectByContainerLookup');
 

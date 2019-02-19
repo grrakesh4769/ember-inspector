@@ -1,4 +1,4 @@
-import { get } from '@ember/object';
+import { get, computed } from '@ember/object';
 import Controller, { inject as controller } from '@ember/controller';
 import debounceComputed from "ember-inspector/computed/debounce";
 import searchMatch from "ember-inspector/utils/search-match";
@@ -13,9 +13,22 @@ export default Controller.extend({
 
   search: null,
 
+  columns: [{
+    valuePath: 'name',
+    name: 'Name'
+  }],
+
   filtered: filter('model', function(item) {
     return searchMatch(get(item, 'name'), this.get('search'));
   }).property('model.@each.name', 'search'),
+
+  rows: computed('filtered.[]', function() {
+    return this.get('filtered').map(function(item) {
+      return {
+        name: item
+      };
+    });
+  }),
 
   actions: {
     /**
@@ -30,6 +43,9 @@ export default Controller.extend({
         return;
       }
       this.get('port').send('objectInspector:inspectByContainerLookup', { name: get(obj, 'fullName') });
+    },
+    sendContainerToConsole() {
+      this.get('port').send('objectInspector:sendContainerToConsole');
     }
   }
 });

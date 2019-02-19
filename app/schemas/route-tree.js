@@ -1,26 +1,15 @@
 /**
  * Route tree schema.
  */
-export default {
-  columns: [{
-    id: 'name',
+export default [
+  {
+    valuePath: 'name',
     name: 'Route Name',
-    visible: true
   }, {
-    id: 'route',
-    name: 'Route',
-    visible: true
+    valuePath: 'objects',
+    name: 'Objects',
   }, {
-    id: 'controller',
-    name: 'Controller',
-    visible: true
-  }, {
-    id: 'template',
-    name: 'Template',
-    visible: true
-  }, {
-    id: 'url',
+    valuePath: 'url',
     name: 'URL',
-    visible: true
-  }]
-};
+  }
+];
